@@ -40,8 +40,8 @@ function Head() {
                     </div>
                 </div>
                 <div className="py-4 flex flex-col gap-4 md:gap-4 md:flex-row justify-between">
-                    <div className="bg-[url(./assets/img4.jpg)] bg-cover w-100 h-130"></div>
-                    <div className="bg-[url(./assets/img4.jpg)] bg-cover w-100 h-70  md:h-[520px] md:w-200"></div>
+                    <div className="bg-[url(./assets/img4.jpg)] bg-cover w-full h-130"></div>
+                    <div className="bg-[url(./assets/img4.jpg)] bg-cover w-full h-70  md:h-[520px] md:w-200"></div>
                 </div>
             </div>
             

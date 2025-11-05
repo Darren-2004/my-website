@@ -6,7 +6,7 @@ import Footer from './Footer.jsx';
 function App() {
   
   return (
-    <div className='uppercase'>
+    <div className='uppercase m-0 p-0'>
       <Head/>
       <Reward/>
       <Projects/>
