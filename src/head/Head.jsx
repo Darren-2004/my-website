@@ -4,7 +4,7 @@ function Head() {
     return (
         <>
             <div className="h-full">
-                <nav className="w-screen h-15 bg-white divide-x-4 border-black border-b-2">
+                <nav className=" h-15 bg-white divide-x-4 border-black border-b-2">
                     <div className="flex text-xs gap-10 justify-between p-5">
                         <a className=" " href="">MENU</a>
                         <a className="hidden lg:block" href="">OUR PRODUCTS</a>
@@ -15,7 +15,7 @@ function Head() {
                 </nav>
                 <div className="flex flex-col h-svh">
                     <div className="h-1/2">
-                        <h1 className="text-5xl uppercase bg-white  p-8 md:px-4  w-dvw font-mono md:text-8xl sm:text-4xl">
+                        <h1 className="text-5xl uppercase bg-white  p-8 md:px-4   font-mono md:text-8xl sm:text-4xl">
                         interior design and architectural design studio
                         </h1>
                     </div>

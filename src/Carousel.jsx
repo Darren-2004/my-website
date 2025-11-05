@@ -76,7 +76,7 @@ const Carousel = ({ images }) => {
 
     return (
         <div className="relative w-full overflow-hidden">
-            <div className="flex gap-5 h-70 w-auto transition-transform duration-500" 
+            <div className="flex gap-5 h-70  transition-transform duration-500" 
                 style={{ transform: `translateX(-${(currentIndex * 100) / 2}%)` }}>
                 {extendedImages.map((image, index) => (
                     <div key={index} className="flex-shrink-0 w-1/3 relative">
