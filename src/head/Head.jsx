@@ -1,4 +1,4 @@
-import CarouselImg from "./CarouselImg";
+import CarouselImg from "../CarouselImg";
 
 function Head() {
     return (

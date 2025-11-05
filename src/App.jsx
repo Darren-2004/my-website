@@ -1,5 +1,5 @@
-import './App.css'
-import Head from './head.jsx'
+import './App.css';
+import Head from "./head/Head.jsx";
 import Reward from './Reward.jsx';
 import Projects from './Projects.jsx';
 import Footer from './Footer.jsx';
