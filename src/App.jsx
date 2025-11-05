@@ -1,12 +1,17 @@
 import './App.css'
-import Head from './Head'
+import Head from './head.jsx'
+import Reward from './Reward.jsx';
 function App() {
   
   return (
     <>
       <Head/>
+      <Reward/>
+      
+
     </>
   )
 }
 
-export default App
+export default App;
+
