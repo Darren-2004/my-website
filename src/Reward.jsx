@@ -2,41 +2,49 @@ import React, { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 function Reward() {
-    const [rewards, setRewards] = useState([]);
-    const [reward, setReward] = useState({ id: "", name: "", description: "", year: "", organism: "" });
+    const [rewards, setRewards] = useState([
+    { id: "1", name: "Pritzker Prize", description: "Awarded to architects for their significant contributions to humanity through architecture.", year: "1988", organism: "Pritzker Architecture Prize" },
+    { id: "2", name: "AIA Gold Medal", description: "Recognizes an individual whose work has had a lasting influence on the theory and practice of architecture.", year: "2019", organism: "American Institute of Architects" },
+    { id: "3", name: "RIBA Stirling Prize", description: "Awarded annually for the best new building in the UK.", year: "2020", organism: "Royal Institute of British Architects" },
+    { id: "4", name: "LEED Platinum Certification", description: "The highest certification awarded for sustainability in building design and construction.", year: "2021", organism: "U.S. Green Building Council" },
+    { id: "5", name: "AIA Institute Honor Awards", description: "Recognizes excellence in architecture and design.", year: "2022", organism: "American Institute of Architects" },
+    { id: "6", name: "World Architecture Festival Award", description: "Celebrates the best architectural projects worldwide.", year: "2023", organism: "World Architecture Festival" }
 
-    useEffect(() => {
-        // Load rewards from local storage on component mount
-        const storedRewards = JSON.parse(localStorage.getItem('rewards'));
-        if (storedRewards) {
-            setRewards(storedRewards);
-        }
-    }, []);
+    ]);
+    // const [reward, setReward] = useState({ id: "", name: "", description: "", year: "", organism: "" });
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setReward((prevReward) => ({ ...prevReward, [name]: value }));
-    };
+    // useEffect(() => {
+    //     // Load rewards from local storage on component mount
+    //     const storedRewards = JSON.parse(localStorage.getItem('rewards'));
+    //     if (storedRewards) {
+    //         setRewards(storedRewards);
+    //     }
+    // }, []);
 
-    const handleSub = (e) => {
-        e.preventDefault();
-        if (reward.year && reward.organism && reward.name && reward.description) {
-            const newReward = { ...reward, id: uuidv4() };
-            setRewards((prevRewards) => {
-                const updatedRewards = [...prevRewards, newReward];
-                localStorage.setItem('rewards', JSON.stringify(updatedRewards));
-                return updatedRewards;
-            });
-            // Reset the form
-            setReward({ id: "", name: "", description: "", year: "", organism: "" });
-        }
-    };
+    // const handleChange = (e) => {
+    //     const { name, value } = e.target;
+    //     setReward((prevReward) => ({ ...prevReward, [name]: value }));
+    // };
 
-    const handleRemoveReward = (id) => {
-        const updatedArray = rewards.filter(item => item.id !== id);
-        setRewards(updatedArray);
-        localStorage.setItem('rewards', JSON.stringify(updatedArray));
-    };
+    // const handleSub = (e) => {
+    //     e.preventDefault();
+    //     if (reward.year && reward.organism && reward.name && reward.description) {
+    //         const newReward = { ...reward, id: uuidv4() };
+    //         setRewards((prevRewards) => {
+    //             const updatedRewards = [...prevRewards, newReward];
+    //             localStorage.setItem('rewards', JSON.stringify(updatedRewards));
+    //             return updatedRewards;
+    //         });
+    //         // Reset the form
+    //         setReward({ id: "", name: "", description: "", year: "", organism: "" });
+    //     }
+    // };
+
+    // const handleRemoveReward = (id) => {
+    //     const updatedArray = rewards.filter(item => item.id !== id);
+    //     setRewards(updatedArray);
+    //     localStorage.setItem('rewards', JSON.stringify(updatedArray));
+    // };
 
     return (
         <>
@@ -55,17 +63,17 @@ function Reward() {
                                     <p className="text-sm">{item.description}</p>
                                 </div>
                             </div>
-                            <button 
+                            {/* <button 
                                 onClick={() => handleRemoveReward(item.id)}
                                 className="bg-red-500 text-white hidden p-2 rounded"
                             >
                                 Delete
-                            </button>
+                            </button> */}
                         </div>
                     ))}
                 </div>
             </div>
-            <form onSubmit={handleSub} className="flex flex-col gap-5 w-[300px] mx-auto mt-10 md:w-[800px] md:text-2xl">
+            {/* <form onSubmit={handleSub} className="flex flex-col gap-5 w-[300px] mx-auto mt-10 md:w-[800px] md:text-2xl">
                 <select
                     name="year"
                     value={reward.year}
@@ -102,7 +110,7 @@ function Reward() {
                     onChange={handleChange}
                 />
                 <button type="submit" className="bg-blue-500 text-white p-2 rounded">Submit</button>
-            </form>
+            </form> */}
         </>
     );
 }

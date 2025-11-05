@@ -15,7 +15,9 @@ function Head() {
                 </nav>
                 <div className="flex flex-col h-svh">
                     <div className="h-1/2">
-                    <h1 className="text-5xl uppercase bg-white h- p-8  w-dvw font-mono md:text-9xl sm:text-4xl">interior design and architectural design studio</h1>
+                        <h1 className="text-5xl uppercase bg-white  p-8 md:px-4  w-dvw font-mono md:text-8xl sm:text-4xl">
+                        interior design and architectural design studio
+                        </h1>
                     </div>
                     <div className="h-full bg-[url(./assets/img1.jpg)] bg-cover w-full">
                         
