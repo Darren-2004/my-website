@@ -14,7 +14,7 @@ function Projects() {
         <>
             <div className="flex flex-col h-auto min-[480px]:grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
                 {projects.map((item) => (
-                    <div key={item.id} className=" w-auto h-70   border rounded-lg overflow-hidden shadow-lg md:h-100 md:w-auto">
+                    <div key={item.id} className=" w-auto h-70  rounded-lg overflow-hidden shadow-lg md:h-100 md:w-auto">
                         <div 
                             className="h-full bg-cover bg-center relative"
                             style={{ backgroundImage: `url(${item.img})` }}
